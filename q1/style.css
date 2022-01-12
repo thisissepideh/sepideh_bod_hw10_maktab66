@@ -1,0 +1,101 @@
+body {
+  background-color: #e9e9e9;
+}
+
+.tile {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #b0acac;
+}
+
+.board {
+  width: 80vh;
+  height: 80vh;
+  margin: 10vh auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.fill-x {
+  position: relative;
+}
+
+.fill-x:after {
+  position: absolute;
+  top: 7vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\0058"; /* use the hex value here... */
+  font-size: 20vh;
+  line-height: 10vh;
+  text-align: center;
+}
+.fill-o {
+  position: relative;
+}
+
+.fill-o:after {
+  position: absolute;
+  top: 7vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\004F"; /* use the hex value here... */
+  font-size: 20vh;
+  line-height: 10vh;
+  text-align: center;
+}
+.win-x {
+  position: relative;
+}
+.win-x:after {
+  position: absolute;
+  top: 35vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X Wins!"; /* use the hex value here... */
+  color: green;
+  font-weight: bolder;
+  font-size: 20vh;
+  line-height: 10vh;
+  text-align: center;
+}
+.win-o {
+  position: relative;
+}
+
+.win-o:after {
+  position: absolute;
+  top: 35vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O Wins!"; /* use the hex value here... */
+  color: green;
+  font-weight: bolder;
+  font-size: 20vh;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.draw {
+  position: relative;
+}
+
+.draw:after {
+  position: absolute;
+  top: 35vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "It’s a Draw!"; /* use the hex value here... */
+  color: red;
+  font-weight: bolder;
+  font-size: 15vh;
+  line-height: 10vh;
+  text-align: center;
+}
